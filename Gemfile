@@ -11,4 +11,8 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo-data"
 end
 
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+# wdm 젬이 Ruby 3.3과 호환되지 않으므로 주석 처리
+# gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+# 대신 webrick을 추가 (Jekyll 서버 실행에 필요)
+gem "webrick"
