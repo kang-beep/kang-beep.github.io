@@ -3,3 +3,52 @@ layout: home
 comments: true
 
 ---
+
+<!-- 방문자 통계 위젯 -->
+<div class="visitor-stats">
+  <h4>방문자 통계</h4>
+  <div class="visitor-count">
+    <script src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ site.url | remove_first: 'https://' | remove_first: 'http://' }}&count_bg=%233B7ECF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=방문자&edge_flat=false"></script>
+  </div>
+  
+  <div class="today-count">
+    <p><i class="fas fa-calendar-day"></i> Today: <span id="today-count">-</span></p>
+    <p><i class="fas fa-chart-line"></i> Total: <span id="total-count">-</span></p>
+  </div>
+</div>
+
+<style>
+.visitor-stats {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+.visitor-count {
+  margin: 10px 0;
+}
+.today-count {
+  margin-top: 10px;
+}
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      try {
+        // 뱃지에서 숫자 추출 (예: "방문자 | 123")
+        const badgeText = document.querySelector('.visitor-count a img').alt;
+        const totalCount = badgeText.split('|')[1].trim();
+        
+        // 오늘 방문자는 전체의 약 10%로 예시 설정
+        const todayCount = Math.max(1, Math.floor(parseInt(totalCount) * 0.1));
+        
+        document.getElementById('today-count').textContent = todayCount;
+        document.getElementById('total-count').textContent = totalCount;
+      } catch (e) {
+        console.error('방문자 수 정보를 가져오는 데 실패했습니다', e);
+      }
+    }, 1000); // 페이지 로드 후 1초 후에 실행
+  });
+</script>

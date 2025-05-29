@@ -59,9 +59,9 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-XXXXXXXXXX # Google Analytics에서 발급받은 ID로 변경하세요
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id: your-goatcounter-code # GoatCounter에서 발급받은 코드로 변경하세요
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain
@@ -75,7 +75,7 @@ analytics:
 
 # Page views settings
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: goatcounter # goatcounter 사용하도록 설정
 
 # Prefer color scheme setting.
 #
