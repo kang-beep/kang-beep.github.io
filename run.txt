@@ -1,0 +1,31 @@
+# Jekyll 블로그 실행 명령어들
+
+## 기본 실행 (가장 일반적)
+bundle exec jekyll serve
+
+## 라이브 리로드와 함께 실행 (개발 시 권장)
+bundle exec jekyll serve --livereload
+
+## 초안(drafts) 포함하여 실행
+bundle exec jekyll serve --drafts
+
+## 특정 포트로 실행
+bundle exec jekyll serve --port 4001
+
+## 모든 옵션 포함 (개발용)
+bundle exec jekyll serve --livereload --drafts --port 4000
+
+## 의존성 설치 (최초 1회 또는 Gemfile 변경 시)
+bundle install
+
+## 빌드만 하기 (배포용)
+bundle exec jekyll build
+
+## 캐시 정리 후 실행
+bundle exec jekyll clean && bundle exec jekyll serve
+
+## 백그라운드 실행
+bundle exec jekyll serve --detach
+
+# 일반적으로 개발 시에는 다음 명령어를 주로 사용:
+# bundle exec jekyll serve --livereload
