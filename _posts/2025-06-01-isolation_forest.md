@@ -474,8 +474,8 @@ Isolation Forest는 단순함 속에 깊은 통찰을 담고 있는 알고리즘
 ---
 
 **관련 포스트**
-- [LOF (Local Outlier Factor) 알고리즘 완전 정복](link)
-- [One-Class SVM을 활용한 이상탐지](link)
-- [시계열 데이터 이상탐지 기법 비교](link)
-- [AutoEncoder 기반 이상탐지 구현](link)
+- LOF (Local Outlier Factor) 알고리즘 완전 정복
+- One-Class SVM을 활용한 이상탐지  
+- 시계열 데이터 이상탐지 기법 비교
+- AutoEncoder 기반 이상탐지 구현
 
