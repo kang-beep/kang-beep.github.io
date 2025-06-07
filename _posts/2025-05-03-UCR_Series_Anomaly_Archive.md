@@ -1,5 +1,5 @@
 ---
-title: 안녕하세요
+title: UCR Series anomaly Archive
 date: 2025-05-29 00:00:00 +0900
 categories: [인공지능]
 tags: [TimeSeries, 시계열 데이터]
